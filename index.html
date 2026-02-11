@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRD MODS | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* SHARED CSS VARIABLES */
+        :root {
+            --bg-color: #0f0f13;
+            --card-bg: #1a1a24;
+            --text-color: #e0e0e0;
+            --accent-primary: #7d2ae8;
+            --accent-secondary: #00ffc8;
+            --nav-height: 70px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Rajdhani', sans-serif; background-color: var(--bg-color); color: var(--text-color); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        
+        /* HEADER */
+        header {
+            position: fixed; top: 0; width: 100%; height: var(--nav-height);
+            background: rgba(15, 15, 19, 0.95); backdrop-filter: blur(10px);
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 5%; z-index: 1000; border-bottom: 1px solid rgba(125, 42, 232, 0.2);
+        }
+        .logo { font-family: 'Orbitron', sans-serif; font-size: 1.8rem; font-weight: 900; color: #fff; }
+        .logo span { color: var(--accent-primary); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a:hover { color: var(--accent-secondary); }
+
+        /* HERO */
+        .hero {
+            height: 80vh; display: flex; align-items: center; justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920');
+            background-size: cover; background-position: center;
+        }
+        .hero h1 { font-family: 'Orbitron', sans-serif; font-size: 3.5rem; margin-bottom: 20px; }
+        
+        /* CATEGORY SECTION */
+        .categories { padding: 80px 10%; }
+        .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .cat-card {
+            background: var(--card-bg); padding: 40px 20px; text-align: center;
+            border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+        .cat-card:hover { transform: translateY(-10px); border-color: var(--accent-secondary); }
+        .cat-icon { font-size: 3rem; color: var(--accent-primary); margin-bottom: 20px; }
+        .cat-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: #fff; }
+        .cat-btn {
+            display: inline-block; padding: 10px 25px; background: var(--accent-primary);
+            color: #fff; border-radius: 5px; font-weight: bold; margin-top: 15px;
+        }
+        .cat-btn:hover { background: var(--accent-secondary); color: #000; }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 40px; border-top: 1px solid #333; color: #666; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Hide nav on mobile for simplicity in this version */
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">SRD <span>MODS</span></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="apks.html">APKs</a></li>
+                <li><a href="emulators.html">Emulators</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>WELCOME TO <span style="color:var(--accent-secondary)">SRD MODS</span></h1>
+            <p style="font-size: 1.2rem; color: #ccc;">Select a category below to start downloading.</p>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="cat-grid">
+            <div class="cat-card">
+                <i class="fas fa-gamepad cat-icon"></i>
+                <h3>Modded Games</h3>
+                <p>Infinite ammo, unlocked skins, and more.</p>
+                <a href="games.html" class="cat-btn">Browse Games</a>
+            </div>
+
+            <div class="cat-card">
+                <i class="fab fa-android cat-icon"></i>
+                <h3>Premium APKs</h3>
+                <p>Pro versions of your favorite apps.</p>
+                <a href="apks.html" class="cat-btn">Browse APKs</a>
+            </div>
+
+            <div class="cat-card">
+                <i class="fas fa-microchip cat-icon"></i>
+                <h3>Emulators</h3>
+                <p>Play console games on your phone.</p>
+                <a href="emulators.html" class="cat-btn">Get Emulators</a>
+            </div>
+
+            <div class="cat-card">
+                <i class="fas fa-compact-disc cat-icon"></i>
+                <h3>Emulator Games</h3>
+                <p>ROMs and ISOs for emulators.</p>
+                <a href="roms.html" class="cat-btn">View Library</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SRD MODS. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
