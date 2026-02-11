@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Using the same styles as Games page */
         :root { --bg-color: #0f0f13; --card-bg: #1a1a24; --text-color: #e0e0e0; --accent-primary: #7d2ae8; --accent-secondary: #00ffc8; --nav-height: 70px; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Rajdhani', sans-serif; background-color: var(--bg-color); color: var(--text-color); }
@@ -16,28 +15,24 @@
         
         header { position: fixed; top: 0; width: 100%; height: var(--nav-height); background: rgba(15, 15, 19, 0.95); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; z-index: 1000; border-bottom: 1px solid var(--accent-secondary); }
         .logo { font-family: 'Orbitron', sans-serif; font-size: 1.8rem; font-weight: 900; color: #fff; }
-        .logo span { color: var(--accent-secondary); } /* Different accent color for Emulators page */
+        .logo span { color: var(--accent-secondary); }
         .back-btn { font-size: 1rem; color: #aaa; }
         .back-btn:hover { color: #fff; }
 
         .container { padding: 120px 10% 50px; }
         .page-title { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; margin-bottom: 40px; color: #fff; }
-        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        
         .card { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
         .card:hover { transform: translateY(-5px); border-color: var(--accent-secondary); }
         .card-img { height: 180px; background: #333; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         .card-img img { width: 100%; height: 100%; object-fit: cover; }
         .card-body { padding: 20px; }
         .card h3 { color: #fff; margin-bottom: 10px; }
-        
         .download-btn { display: block; width: 100%; padding: 10px; text-align: center; background: transparent; color: var(--accent-secondary); font-weight: bold; border: 1px solid var(--accent-secondary); border-radius: 5px; }
         .download-btn:hover { background: var(--accent-secondary); color: #000; }
     </style>
 </head>
 <body>
-
     <header>
         <a href="index.html" class="logo">SRD <span>MODS</span></a>
         <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
@@ -45,41 +40,32 @@
 
     <div class="container">
         <h1 class="page-title"><i class="fas fa-microchip"></i> Emulators</h1>
-        
         <div class="grid">
             <div class="card">
-                <div class="card-img">
-                    <img src="https://placehold.co/400x300/222/fff?text=PS2+Emu" alt="PS2">
-                </div>
+                <div class="card-img"><img src="https://placehold.co/400x300/222/fff?text=PS2+Emu" alt="PS2"></div>
                 <div class="card-body">
                     <h3>AetherSX2 (PS2)</h3>
                     <p>Best Performance for PS2 games.</p>
-                    <a href="#" class="download-btn">Download APK</a>
+                    <a href="example.html" class="download-btn">Download APK</a>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-img">
-                    <img src="https://placehold.co/400x300/222/fff?text=PSP+Emu" alt="PSP">
-                </div>
+                <div class="card-img"><img src="https://placehold.co/400x300/222/fff?text=PSP+Emu" alt="PSP"></div>
                 <div class="card-body">
                     <h3>PPSSPP Gold</h3>
                     <p>Play PSP games in HD resolution.</p>
-                    <a href="#" class="download-btn">Download APK</a>
+                    <a href="example.html" class="download-btn">Download APK</a>
                 </div>
             </div>
              <div class="card">
-                <div class="card-img">
-                    <img src="https://placehold.co/400x300/222/fff?text=Switch+Emu" alt="Switch">
-                </div>
+                <div class="card-img"><img src="https://placehold.co/400x300/222/fff?text=Switch+Emu" alt="Switch"></div>
                 <div class="card-body">
                     <h3>Yuzu (Switch)</h3>
-                    <p>Nintendo Switch emulator for high-end phones.</p>
-                    <a href="#" class="download-btn">Download APK</a>
+                    <p>Nintendo Switch emulator.</p>
+                    <a href="example.html" class="download-btn">Download APK</a>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
