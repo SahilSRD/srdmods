@@ -8,59 +8,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* SHARED CSS (Same as Index for consistency) */
-        :root {
-            --bg-color: #0f0f13;
-            --card-bg: #1a1a24;
-            --text-color: #e0e0e0;
-            --accent-primary: #7d2ae8;
-            --accent-secondary: #00ffc8;
-            --nav-height: 70px;
-        }
+        :root { --bg-color: #0f0f13; --card-bg: #1a1a24; --text-color: #e0e0e0; --accent-primary: #7d2ae8; --accent-secondary: #00ffc8; --nav-height: 70px; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Rajdhani', sans-serif; background-color: var(--bg-color); color: var(--text-color); }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         
-        /* HEADER */
-        header {
-            position: fixed; top: 0; width: 100%; height: var(--nav-height);
-            background: rgba(15, 15, 19, 0.95); backdrop-filter: blur(10px);
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 0 5%; z-index: 1000; border-bottom: 1px solid var(--accent-primary);
-        }
+        header { position: fixed; top: 0; width: 100%; height: var(--nav-height); background: rgba(15, 15, 19, 0.95); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; z-index: 1000; border-bottom: 1px solid var(--accent-primary); }
         .logo { font-family: 'Orbitron', sans-serif; font-size: 1.8rem; font-weight: 900; color: #fff; }
         .logo span { color: var(--accent-primary); }
         .back-btn { font-size: 1rem; color: #aaa; }
         .back-btn:hover { color: #fff; }
 
-        /* CONTENT */
         .container { padding: 120px 10% 50px; }
         .page-title { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; margin-bottom: 40px; color: var(--accent-secondary); }
-        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        
-        .card {
-            background: var(--card-bg); border-radius: 12px; overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05); transition: 0.3s;
-        }
+        .card { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
         .card:hover { transform: translateY(-5px); border-color: var(--accent-secondary); }
-        
         .card-img { height: 180px; background: #333; overflow: hidden; }
         .card-img img { width: 100%; height: 100%; object-fit: cover; }
-        
         .card-body { padding: 20px; }
         .card h3 { color: #fff; margin-bottom: 10px; }
         .card p { font-size: 0.9rem; color: #aaa; margin-bottom: 20px; }
-        
-        .download-btn {
-            display: block; width: 100%; padding: 10px; text-align: center;
-            background: var(--accent-primary); color: #fff; font-weight: bold; border-radius: 5px;
-        }
+        .download-btn { display: block; width: 100%; padding: 10px; text-align: center; background: var(--accent-primary); color: #fff; font-weight: bold; border-radius: 5px; }
         .download-btn:hover { background: var(--accent-secondary); color: #000; }
     </style>
 </head>
 <body>
-
     <header>
         <a href="index.html" class="logo">SRD <span>MODS</span></a>
         <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
@@ -68,42 +41,32 @@
 
     <div class="container">
         <h1 class="page-title">Modded Games</h1>
-        
         <div class="grid">
             <div class="card">
-                <div class="card-img">
-                    <img src="https://placehold.co/400x300/1a1a24/7d2ae8?text=Shooter+V2" alt="Game">
-                </div>
+                <div class="card-img"><img src="https://placehold.co/400x300/1a1a24/7d2ae8?text=Shooter+V2" alt="Game"></div>
                 <div class="card-body">
                     <h3>Cyber Shooter V2</h3>
                     <p>Features: God Mode, Unlimited Ammo.</p>
-                    <a href="#" class="download-btn">Download</a>
+                    <a href="example.html" class="download-btn">Download</a>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-img">
-                    <img src="https://placehold.co/400x300/1a1a24/00ffc8?text=Racing+X" alt="Game">
-                </div>
+                <div class="card-img"><img src="https://placehold.co/400x300/1a1a24/00ffc8?text=Racing+X" alt="Game"></div>
                 <div class="card-body">
                     <h3>Neon Racing X</h3>
                     <p>Features: All Cars Unlocked, Max Cash.</p>
-                    <a href="#" class="download-btn">Download</a>
+                    <a href="example.html" class="download-btn">Download</a>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-img">
-                    <img src="https://placehold.co/400x300/1a1a24/ff0055?text=Zombie+Survival" alt="Game">
-                </div>
+                <div class="card-img"><img src="https://placehold.co/400x300/1a1a24/ff0055?text=Zombie+Survival" alt="Game"></div>
                 <div class="card-body">
                     <h3>Zombie Survival</h3>
                     <p>Features: Free Crafting, No Hunger.</p>
-                    <a href="#" class="download-btn">Download</a>
+                    <a href="example.html" class="download-btn">Download</a>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
