@@ -38,52 +38,39 @@
 <body>
     <header>
         <a href="index.html" class="logo">SRD <span>MODS</span></a>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="apks.html">APKs</a></li>
-                <li><a href="emulators.html">Emulators</a></li>
-            </ul>
-        </nav>
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
     </header>
 
-    <section class="hero">
-        <div>
-            <h1>WELCOME TO <span style="color:var(--accent-secondary)">SRD MODS</span></h1>
-            <p style="font-size: 1.2rem; color: #ccc;">Select a category below to start downloading.</p>
-        </div>
-    </section>
+    <div class="container">
+        <h1 class="page-title">Modded Games</h1>
+        
+        <div class="grid" id="games-container"></div>
+    </div>
 
-    <section class="categories">
-        <div class="cat-grid">
-            <div class="cat-card">
-                <i class="fas fa-gamepad cat-icon"></i>
-                <h3>Modded Games</h3>
-                <p>Infinite ammo, unlocked skins, and more.</p>
-                <a href="games.html" class="cat-btn">Browse Games</a>
-            </div>
-            <div class="cat-card">
-                <i class="fab fa-android cat-icon"></i>
-                <h3>Premium APKs</h3>
-                <p>Pro versions of your favorite apps.</p>
-                <a href="apks.html" class="cat-btn">Browse APKs</a>
-            </div>
-            <div class="cat-card">
-                <i class="fas fa-microchip cat-icon"></i>
-                <h3>Emulators</h3>
-                <p>Play console games on your phone.</p>
-                <a href="emulators.html" class="cat-btn">Get Emulators</a>
-            </div>
-            <div class="cat-card">
-                <i class="fas fa-compact-disc cat-icon"></i>
-                <h3>Emulator Games</h3>
-                <p>ROMs and ISOs for emulators.</p>
-                <a href="roms.html" class="cat-btn">View Library</a>
-            </div>
-        </div>
-    </section>
+    <script src="database.js"></script>
+    
+    <script>
+        const container = document.getElementById('games-container');
+        
+        // Filter only items where category is 'game'
+        const games = srdDatabase.filter(item => item.category === 'game');
 
-    <footer><p>&copy; 2024 SRD MODS. All Rights Reserved.</p></footer>
+        games.forEach(game => {
+            const card = `
+                <div class="card">
+                    <div class="card-img">
+                        <span style="position:absolute; top:15px; right:15px; background:#7d2ae8; color:#fff; padding:4px 10px; border-radius:4px; font-size:0.8rem; font-weight:bold;">${game.badge}</span>
+                        <img src="${game.image}" alt="${game.title}">
+                    </div>
+                    <div class="card-body">
+                        <h3>${game.title}</h3>
+                        <p>${game.description}</p>
+                        <a href="${game.link}" class="download-btn">Download</a>
+                    </div>
+                </div>
+            `;
+            container.innerHTML += card;
+        });
+    </script>
 </body>
 </html>
